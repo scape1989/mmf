@@ -147,9 +147,10 @@ class BertTokenizer(MaskedTokenProcessor):
         self._probability = 0
 
     def __call__(self, item):
-
         if "text" in item:
             text_a = item["text"]
+        elif "text_a" in item:
+            text_a = item["text_a"]
         else:
             text_a = " ".join(item["tokens"])
 
