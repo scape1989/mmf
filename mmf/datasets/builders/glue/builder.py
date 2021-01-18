@@ -1,13 +1,12 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
-import time
-
 import torch
-from datasets import load_dataset
 from mmf.common.registry import registry
 from mmf.common.sample import Sample
 from mmf.datasets.base_dataset import BaseDataset
 from mmf.datasets.mmf_dataset_builder import MMFDatasetBuilder
 from mmf.utils.general import retry_n
+
+from datasets import load_dataset
 
 
 MAX_RETRIES = 9
