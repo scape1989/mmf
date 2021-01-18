@@ -55,7 +55,7 @@ class GLUEDataset(BaseDataset):
             "text_a": annotation[self.DATASET_KEY_MAP["text_a"][self.dataset_name]]
         }
 
-        text_b = annotation[self.DATASET_KEY_MAP["text_b"][self.dataset_name]]
+        text_b = annotation.get(self.DATASET_KEY_MAP["text_b"][self.dataset_name], None)
         if text_b is not None:
             text_processor_input["text_b"] = text_b
 
